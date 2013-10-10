@@ -7,7 +7,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>quadTree</name>
+    <name>Quad Tree Interview Test</name>
+
+    <scm>
+        <connection>scm:git:git@github.com:smozely/QuadTree.git</connection>
+        <url>scm:git:git@github.com:smozely/QuadTree.git</url>
+        <developerConnection>scm:git:git@github.com:smozely/QuadTree.git</developerConnection>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,7 +25,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.4</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -1,17 +1,16 @@
 package quadTree;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 public class QuadTreeTest {
-	private static final String DATASET = "dataset.dat";
-	private static final String EXPECTED_DATASET = "expected_dataset.dat";
+	private static final String DATASET = "/data/dataset.dat";
+	private static final String EXPECTED_DATASET = "/data/expected_dataset.dat";
 
 	private Comparator<? super DataPoint> resultComparator = new Comparator<DataPoint>() {
 		@Override
@@ -25,10 +24,10 @@ public class QuadTreeTest {
 
 	@Test
 	public void testIntersect() throws Exception {
-		List<DataPoint> dataset = DataSet.readDataPoints(DATASET);
+		List<DataPoint> dataset = DataSet.readDataPoints(this.getClass().getResourceAsStream(DATASET));
 		Rectangle rect = new Rectangle(-0.1f, -0.1f, 0.1f, 0.1f);
 
-		List<DataPoint> expectedResult = DataSet.readDataPoints(EXPECTED_DATASET);
+		List<DataPoint> expectedResult = DataSet.readDataPoints(this.getClass().getResourceAsStream(EXPECTED_DATASET));
 		List<DataPoint> actualResult = getIntersectedSetUsingQuadTree(dataset, rect);
 
 		Collections.sort(actualResult, resultComparator);
