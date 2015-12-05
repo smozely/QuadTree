@@ -1,5 +1,5 @@
 package quadTree;
 
 public interface QuadTreeIntersectionProcessor {
-	public void processIntersection(DataPoint intersectedPoint);
+    public void processIntersection(DataPoint intersectedPoint);
 }
