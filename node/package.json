@@ -1,0 +1,19 @@
+{
+  "name": "QuadTree",
+  "version": "0.0.0",
+  "description": "QuadTree Interview Test",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.3.4",
+    "should": "^7.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
