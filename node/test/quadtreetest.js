@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var dataset = require('../lib/dataset');
-var DataPoint = require('../lib/datapoint');
+var QuadTree = require('../lib/quadtree');
 var Rectangle = require('../lib/datapoint');
 
 describe('QuadTree', function () {
