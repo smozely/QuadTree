@@ -11,8 +11,8 @@ import static org.junit.Assert.assertTrue;
 
 public class QuadTreeTest {
 
-	private static final String DATASET = "../data/dataset.dat";
-	private static final String EXPECTED_DATASET = "../data/expected_dataset.dat";
+	private static final String DATASET = "../data/dataset.txt";
+	private static final String EXPECTED_DATASET = "../data/expected_dataset.txt";
 
 	private Comparator<? super DataPoint> resultComparator = (o1, o2) -> {
         float r1 = (float)Math.sqrt(o1.x * o1.x + o1.y * o1.y);
