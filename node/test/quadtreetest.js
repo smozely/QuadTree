@@ -3,18 +3,17 @@
 var assert = require('assert');
 var dataset = require('../lib/dataset');
 var QuadTree = require('../lib/quadtree');
-var Rectangle = require('../lib/datapoint');
+var Rectangle = require('../lib/rectangle');
 
 describe('QuadTree', function () {
     it('Correctly Calculate the Intersection with a Rectangle', function () {
+        let expectedResult = dataset("../data/expected_dataset.txt").sort(compareDataPoints);
+
         let dataSet = dataset("../data/dataset.txt");
         let rect = new Rectangle(-0.1, -0.1, 0.1, 0.1);
 
-        let expectedResult = dataset("../data/expected_dataset.txt");
-        let actualResult = getIntersectedSetUsingQuadTree(dataSet, rect);
+        let actualResult = getIntersectedSetUsingQuadTree(dataSet, rect).sort(compareDataPoints);
 
-        actualResult.sort(compareDataPoints)
-        expectedResult.sort(compareDataPoints)
         identical(actualResult, expectedResult);
     });
 
