@@ -7,11 +7,10 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-mocha": "^2.2.0",
-    "mocha": "^2.3.4",
-    "should": "^7.1.1"
+    "mocha": "^2.3.4"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "gulp"
   },
   "keywords": [],
   "author": "",

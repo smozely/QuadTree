@@ -11,8 +11,7 @@ describe('QuadTree', function () {
         let rect = new Rectangle(-0.1, -0.1, 0.1, 0.1);
 
         let expectedResult = dataset("../data/expected_dataset.txt");
-        let actualResult = dataSet;
-        //let actualResult = getIntersectedSetUsingQuadTree(dataSet, rect);
+        let actualResult = getIntersectedSetUsingQuadTree(dataSet, rect);
 
         actualResult.sort(compareDataPoints)
         expectedResult.sort(compareDataPoints)
