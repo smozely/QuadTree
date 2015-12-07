@@ -7,6 +7,7 @@ var Rectangle = require('../lib/rectangle');
 
 describe('QuadTree', function () {
     it('Correctly Calculate the Intersection with a Rectangle', function () {
+        this.timeout(0)
         let expectedResult = dataset("../data/expected_dataset.txt").sort(compareDataPoints);
 
         let dataSet = dataset("../data/dataset.txt");
@@ -17,8 +18,18 @@ describe('QuadTree', function () {
         identical(actualResult, expectedResult);
     });
 
-    function getIntersectedSetUsingQuadTree(dataSet, rect) {
-        throw new Error("Not Yet Implemented");
+    function getIntersectedSetUsingQuadTree(dataSet, rect) {        
+        let quadTree = QuadTree.constructFrom(dataSet);
+
+        for (let i = 0; i < 5000; i++ ){
+        var result = []
+
+        quadTree.intersect(rect, function (point) {
+            result.push(point);
+        });
+    }
+
+        return result;
     }
 
     function identical(actual, expected) {
