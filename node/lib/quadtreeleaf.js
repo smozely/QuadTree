@@ -48,10 +48,6 @@ class QuadTreeLeaf {
         return this.rectangle.contains(point);
     }
 
-    toString(indent) {
-        return indent + "QuadTreeLeaf rectangle: {"+this.rectangle.toString()+"}, points: {"+ this.points.length +"}"
-    }
-
     size() {
         return this.points.length
     }

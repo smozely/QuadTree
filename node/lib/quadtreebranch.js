@@ -42,10 +42,6 @@ class QuadTreeBranch {
                this.topRight.contains(point) || this.bottomRight.contains(point);
     }
 
-    toString(indent) {
-        return indent + "QuadTreeBranch rectangle: {"+this.rectangle.toString()+"}, \n"+indent+"topLeft: {" + this.topLeft.toString(indent + "  ") + "}, \n"+indent+"bottomLeft: {" + this.bottomLeft.toString(indent + "  ") + "},\n"+indent+"topRight: {" + this.topRight.toString(indent + "  ") + "},\n"+indent+"topRight: {" + this.bottomRight.toString(indent + "  ") + "}"; 
-    }
-
     size () {
         return this.topLeft.size() + this.topRight.size() + this.bottomLeft.size() + this.bottomRight.size();
     }

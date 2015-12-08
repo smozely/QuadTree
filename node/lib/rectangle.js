@@ -47,10 +47,6 @@ class Rectangle {
         return new Rectangle(this.midX(), this.midY(), this.x2, this.y2);
     }
 
-    toString() {
-        return `Rectangle x1: ${this.x1} x2: ${this.x2} y1: ${this.y1} y2: ${this.y2}`
-    }
-
 }
 
 module.exports = Rectangle;
